@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springapp.mvc.dao.TestcaseDAO">
+    <insert id="insertTestcase">
+        insert into atftest(id, casecode, prio)
+        values(#{id1}, #{casecode1},#{prio1} )
+    </insert>
+    <select id="getAll" resultType="Testcase">
+        select testcaseId, id, casecode, prio from atftest
+    </select>
+</mapper>
